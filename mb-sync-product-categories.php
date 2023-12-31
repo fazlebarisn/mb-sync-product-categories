@@ -64,7 +64,7 @@ function mb_add_custom_product_categories(){
 
     //add sub menu in product menu for sync product categories
     add_submenu_page(
-        'edit.php?post_type=product',
+        'mb_syncs',
         'Sync Categories',
         'Sync Categories',
         'manage_options',
@@ -72,7 +72,7 @@ function mb_add_custom_product_categories(){
         'mb_product_categories_sync'
     );
 }
-add_action('admin_menu', 'mb_add_custom_product_categories');
+add_action('admin_menu', 'mb_add_custom_product_categories', 999);
 
 
 
